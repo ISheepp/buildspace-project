@@ -7,7 +7,7 @@ import "@nomiclabs/hardhat-ethers";
 import "hardhat-gas-reporter";
 import "@nomiclabs/hardhat-etherscan";
 import { ProxyAgent, setGlobalDispatcher } from "undici"
-const proxyAgent = new ProxyAgent('http://127.0.0.1:1080'); // change to yours
+const proxyAgent = new ProxyAgent('http://127.0.0.1:7890'); // change to yours
 setGlobalDispatcher(proxyAgent);
 
 
@@ -20,7 +20,7 @@ const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 
 const config: HardhatUserConfig = {
     solidity: {
-        version: "0.8.9",
+        version: "0.8.7",
         settings: {
             optimizer: {
                 enabled: false,
